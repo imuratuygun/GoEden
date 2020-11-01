@@ -9,9 +9,19 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./source/main.js" defer></script>
+        
     </head>
     <body>
         <button id="heart" style="padding: 20px; font-size: 36px; background-color: #fa73b9; color: #fff; text-align: center;">connect your heart</button>
+        <script>
+alert("js entered")
+
+document.getElementById("heart").addEventListener("pointerup", function(event){
+  navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
+  .then(device => { /* … */ })
+  .catch(error => { console.error(error); });
+  
+});
+        </script>
     </body>
 </html>
