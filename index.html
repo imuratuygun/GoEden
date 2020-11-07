@@ -13,7 +13,7 @@ and open the template in the editor.
     <body>
         <button id="heart" style="padding: 20px; font-size: 36px; background-color: #fa73b9; color: #fff; text-align: center;">connect your heart</button>
         <script>
-            document.getElementById("heart").addEventListener("onclick", function(event){
+            document.getElementById("heart").addEventListener("click", function(event){
                 alert("js entered");
                 console.log("js entered");
                 navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
